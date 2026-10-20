@@ -1,4 +1,4 @@
-export type Channel = "wa_official" | "wa_uazapi" | "instagram" | "messenger"
+export type Channel = "wa_official" | "wa_uazapi"
 
 export type LeadSource = "facebook_ads" | "instagram_ads" | "whatsapp" | "site" | "indicacao" | "manual"
 

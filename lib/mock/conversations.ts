@@ -44,8 +44,6 @@ export const seedConversations: Conversation[] = seedLeads.map((lead, i) => ({
 export const channelLabel: Record<Channel, string> = {
   wa_official: "WhatsApp Oficial",
   wa_uazapi: "WhatsApp uazapi",
-  instagram: "Instagram Direct",
-  messenger: "Messenger",
 }
 
 export const autoReplies = [

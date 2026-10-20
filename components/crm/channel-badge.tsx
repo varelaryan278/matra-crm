@@ -1,4 +1,4 @@
-import { BadgeCheck, Camera, Globe, MessageCircle, MessageSquare, QrCode, Users, Hand, Megaphone } from "lucide-react"
+import { BadgeCheck, Camera, Globe, MessageCircle, QrCode, Users, Hand, Megaphone } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { Channel, LeadSource } from "@/lib/mock/types"
 import { channelLabel } from "@/lib/mock/conversations"
@@ -7,8 +7,6 @@ import { sourceLabel } from "@/lib/mock/leads"
 const channelStyle: Record<Channel, { icon: typeof MessageCircle; className: string; mark?: typeof BadgeCheck }> = {
   wa_official: { icon: MessageCircle, className: "bg-emerald-500 text-white", mark: BadgeCheck },
   wa_uazapi: { icon: MessageCircle, className: "bg-teal-600 text-white", mark: QrCode },
-  instagram: { icon: Camera, className: "bg-gradient-to-br from-fuchsia-500 via-pink-500 to-amber-400 text-white" },
-  messenger: { icon: MessageSquare, className: "bg-blue-500 text-white" },
 }
 
 export const ChannelIcon = ({ channel, className }: { channel: Channel; className?: string }) => {

@@ -35,7 +35,7 @@ export const DashboardView = () => {
     leads.reduce<Record<string, number>>((acc, l) => ({ ...acc, [l.source]: (acc[l.source] ?? 0) + 1 }), {}),
   ).sort((a, b) => b[1] - a[1]) as [LeadSource, number][]
 
-  const channels = (["wa_official", "wa_uazapi", "instagram", "messenger"] as Channel[]).filter((c) => connections[c].status === "connected").map((c) => ({
+  const channels = (["wa_official", "wa_uazapi"] as Channel[]).filter((c) => connections[c].status === "connected").map((c) => ({
     channel: c,
     count: conversations.filter((cv) => cv.channel === c).reduce((s, cv) => s + cv.messages.length, 0),
   }))

@@ -18,7 +18,7 @@ const items = [
   { href: "/integracoes", label: "Integrações", icon: Plug },
 ]
 
-const channels: Channel[] = ["wa_official", "wa_uazapi", "instagram", "messenger"]
+const channels: Channel[] = ["wa_official", "wa_uazapi"]
 
 export const AppSidebar = () => {
   const pathname = usePathname()

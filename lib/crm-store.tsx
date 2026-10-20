@@ -11,14 +11,12 @@ import { useLeadActivity } from "./lead-activity"
 import { formatBRL, localNowIso } from "./format"
 import type { Automation, Connection, Conversation, DistributionMode, Lead, Message } from "./mock/types"
 
-export type ConnectionKey = "wa_official" | "wa_uazapi" | "facebook_leads" | "instagram" | "messenger"
+export type ConnectionKey = "wa_official" | "wa_uazapi" | "facebook_leads"
 
 const seedConnections: Record<ConnectionKey, Connection> = {
   wa_official: { status: "connected", phone: "+55 43 3027-0409", detail: "WABA Matra Comercial" },
   wa_uazapi: { status: "connected", phone: "+55 43 99914-0409", detail: "Instância vendas-01" },
   facebook_leads: { status: "connected", detail: "Página Matra Tecnologia · 3 formulários" },
-  instagram: { status: "disconnected" },
-  messenger: { status: "disconnected" },
 }
 
 const nowTime = () => new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })

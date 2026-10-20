@@ -9,7 +9,7 @@ import { ChannelTag } from "@/components/crm/channel-badge"
 import { useCrm } from "@/lib/crm-store"
 import type { Channel } from "@/lib/mock/types"
 
-const allChannels: Channel[] = ["wa_official", "wa_uazapi", "instagram", "messenger"]
+const allChannels: Channel[] = ["wa_official", "wa_uazapi"]
 
 type Scope = "all" | "unread" | "waiting"
 

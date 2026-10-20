@@ -22,11 +22,6 @@ export const IntegrationsView = () => {
     toast(`${name} desconectado`)
   }
 
-  const quickConnect = (key: ConnectionKey, detail: string) => {
-    setConnection(key, { status: "connecting" })
-    setTimeout(() => setConnection(key, { status: "connected", detail }), 1200)
-  }
-
   return (
     <div className="flex-1 space-y-8 overflow-y-auto p-6">
       <section className="space-y-3">
@@ -59,10 +54,10 @@ export const IntegrationsView = () => {
 
       <section className="space-y-3">
         <div>
-          <h2 className="font-semibold">Captação e outros canais</h2>
+          <h2 className="font-semibold">Captação de leads</h2>
           <p className="text-sm text-muted-foreground">Leads de anúncios entram sozinhos no funil, sem ninguém digitar.</p>
         </div>
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-2">
           <IntegrationCard
             icon={<Megaphone className="size-5 text-blue-600" />}
             title="Facebook & Instagram Lead Ads"
@@ -70,22 +65,6 @@ export const IntegrationsView = () => {
             connection={connections.facebook_leads}
             onConfigure={() => setDialog("facebook")}
             onDisconnect={() => disconnect("facebook_leads", "Lead Ads")}
-          />
-          <IntegrationCard
-            icon={<ChannelIcon channel="instagram" className="size-6" />}
-            title="Instagram Direct"
-            description="Responda directs e comentários na central de mensagens."
-            connection={connections.instagram}
-            onConfigure={() => quickConnect("instagram", "@matratecnologia")}
-            onDisconnect={() => disconnect("instagram", "Instagram")}
-          />
-          <IntegrationCard
-            icon={<ChannelIcon channel="messenger" className="size-6" />}
-            title="Facebook Messenger"
-            description="Mensagens da sua página do Facebook junto com o resto da equipe."
-            connection={connections.messenger}
-            onConfigure={() => quickConnect("messenger", "Página Matra Tecnologia")}
-            onDisconnect={() => disconnect("messenger", "Messenger")}
           />
         </div>
       </section>
